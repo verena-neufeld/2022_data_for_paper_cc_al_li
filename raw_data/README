@@ -1,0 +1,23 @@
+These csv files have data extracted from calculations, for lithium (li) and aluminium (al).
+*1sfrozen* contains data where the 1s electrons were frozen in the post HF calculations.
+single_atom contains data from the unrestricted calculations involving only a single atom.
+
+The calculations were run at the Baldereschi twist angle, at the cubic one for li and isotropic cell al, and at the FCC one for anisotropic cell al.
+The li pseudopotential was "gth-pade" and the one for al "gth-hf-rev".
+
+Explanations of columns:
+
+a: lattice parameter in angstrom
+E_HF: HF energy (ha)
+E_CCSD_corr: CCSD correlation energy (ha)
+Nk: ignore this column
+kpts: k point mesh, e.g. 333 for a 3x3x3 mesh
+basis: basis, li and al dz: "dzvp", li tz: "tzv2p", al tz: "tzv2p_f", li qz: "qzv3p", al qz: "qzv3p_f"
+E_CCSD: total CCSD energy (ha)
+KMP2 corr: MP2 correlation energy (ha)
+t_corr: (T) contribution to correlation energy (ha)
+Nk_str: k point mesh, e.g. 333 for a 3x3x3 mesh
+note: Some comments
+
+nshells: Number of shells of ghost atoms around single atom studied
+box_length: Length of side of cubic unit cell for single atom calculation.

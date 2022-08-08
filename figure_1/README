@@ -1,0 +1,2 @@
+This folder contains the data plotted in figure 1, files starting with element ("al" or "li") and containing basis set type (plane wave "pw", optimised GTH "optgth", original GTH "gth").
+To plot figure 1, plot 1/# Spat. orbs against E_MP2_corr/2 or E_CCSD_corr/2 as there are 2 atoms per cell.

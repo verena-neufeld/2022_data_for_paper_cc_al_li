@@ -1,0 +1,18 @@
+Files in this folder:
+=====================
+al:
+---
+al/al_struct_results_27tz.csv
+
+li:
+---
+li/li_struct_results_27tz_222_333.csv
+
+In both files, data available in ../figure_3 has been fitted to get the equilibrium lattice constant a (in ang), bulk modulus B (in 100 GPa) and cohesive energy E_coh (in ha).
+
+How to plot figure 3:
+=====================
+Selecting "cbs" basis and CCSD, CCSD+(T) (-> CCSD(T)_SR) and CCSD-SAC (-> CCSD-SVC) (Al) or CCSD-SVC (Li), a, B and E_coh can be plotted together with the literature DFT data and ZPM corrected exp. data.
+Note that the columns ending in "_corrected" were used. See figure_3 for explanation what this means.
+Note that for bulk modulus B, multiplying by 100 is required to get GPa.
+

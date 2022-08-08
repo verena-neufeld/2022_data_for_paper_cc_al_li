@@ -1,6 +1,8 @@
-This repository contains the basis sets optimised and (soon - todo) data generated in "V. A. Neufeld, H.-Z. Ye, T. C. Berkelbach, Ground-State Properties of Metallic Solids from Ab Initio Coupled-Cluster Theory", J. Phys. Chem. Lett. (accepted).
+This repository contains the basis sets optimised and data generated in "V. A. Neufeld, H.-Z. Ye, T. C. Berkelbach, Ground-State Properties of Metallic Solids from Ab Initio Coupled-Cluster Theory, J. Phys. Chem. Lett. (accepted)".
 
 The basis sets are found in "basis_sets". As described in the paper, they were optimised starting from GTH basis sets by [1] (gth-dzvp, gth-tzv2p, gth-qzv3p for DZ, TZ, QZ - plus an f function for TZ and QZ Al) and therefore have similarities with these basis sets.
+"figure_X" folders contain processed data and information to plot figure X.
+"raw_data" folder contains data extracted from calculations.
 
 License: Attribution 4.0 International CC-BY (https://creativecommons.org/licenses/by/4.0/).
 

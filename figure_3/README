@@ -1,0 +1,46 @@
+Files in this folder:
+=====================
+al:
+---
+Intermediate post-processing files:
+- dzvp_extrap_hf_rev_ccsd_corr.csv : extrapolated DZ CCSD corr energy for anisotropic cell, per 2 atoms
+- dzvp_extrap_hf_rev_hf.csv : extrapolated DZ HF energy for cubic cell, per 4 atoms
+- single_atom/corr_direct_extrap.csv : extrapolated DZ, TZ, QZ CCSD corr energy of single atom ("direct extrap corr")
+- single_atom/hf_direct_extrap.csv : extrapolated DZ, TZ, QZ HF energy of single atom ("direct extrap HF")
+
+Main file for figure 3:
+- al_summary_binding_27tz.csv : single atom, bulk (and "corrected" bulk) and cohesive (and "corrected" cohesive) energies for Al. Corrected is correcting energy with extrapolation of 552 and 442 CCSD correlation energy at a=4.05ang. For not corrected energies, the 552 CCSD corr DZ energy is used as the TDL DZ energy.
+
+li:
+---
+Intermediate post-processing files:
+- dzvp_extrap_ccsd_corr.csv : extrapolated DZ CCSD corr energy, using 333 and 444.
+- dzvp_extrap_ccsd_corr_222_333.csv : extrapolated DZ CCSD corr energy, using 222 and 333.
+- dzvp_extrap_1sfrozen_ccsd_corr.csv : extrapolated DZ CCSD corr energy, using 333 and 444, with 1s frozen in CCSD calculation.
+- dzvp_extrap_1sfrozen_ccsd_corr_222_333.csv : extrapolated DZ CCSD corr energy, using 222 and 333, with 1s frozen in CCSD calculation.
+- dzvp_extrap_hf.csv : extrapolated DZ HF energy. 
+- single_atom/corr_direct_extrap.csv : extrapolated DZ, TZ, QZ CCSD corr energy of single atom ("direct extrap corr")
+- single_atom/hf_direct_extrap.csv : extrapolated DZ, TZ, QZ HF energy of single atom ("direct extrap HF")
+
+Note that when 1s is frozen for the single Li atom, CCSD corr is zero.
+
+Main files for figure 3:
+- li_summary_binding_27tz_222_333.csv : single atom, bulk (and "corrected" bulk) and cohesive (and "corrected" cohesive) energies for Li. For DZ, 222-333 extrapolated CCSD corr energies are used for CCSD corr. Corrected is correcting DZ CCSD corr energy with 333-444 DZ CCSD corr extrapolation at a=3.5ang. 
+- li_summary_binding_27tz_svc_222_333.csv : Using information from li_summary_binding_27tz_222_333.csv and li_summary_binding_27tz_1sfrozen_222_333.csv, CCSD-SVC was evaluated and shown here. See li_summary_binding_27tz_222_333.csv for more.
+(- li_summary_binding_27tz_1sfrozen_222_333.csv : similar to li_summary_binding_27tz_222_333.csv but with 1s frozen for CCSD.)
+
+
+How to plot figure 3:
+=====================
+For al, plot volume ("a"^3/4) against "coh_corrected_en" for these selections:
+method: "CCSD", basis: "qzv3p_f" for CCSD QZ
+method: "CCSD", basis: "cbs" for CCSD
+method: "CCSD+(T)", basis: "cbs" for CCSD(T)_SR
+method: "CCSD-SAC", basis: "cbs" for CCSD-SVC ("SAC" is historic, ignore this discrepancy)
+
+for li, plot volume ("a^3/2") against "coh_corrected_en" for these selections:
+method: "CCSD", basis: "qzv3p" for CCSD QZ (from li_summary_binding_27tz_222_333.csv)
+method: "CCSD", basis: "cbs" for CCSD (from li_summary_binding_27tz_222_333.csv)
+method: "CCSD+(T)", basis: "cbs" for CCSD(T)_SR (from li_summary_binding_27tz_222_333.csv)
+method: "CCSD-SVC", basis: "cbs" for CCSD-SVC (from li_summary_binding_27tz_svc_222_333.csv)
+

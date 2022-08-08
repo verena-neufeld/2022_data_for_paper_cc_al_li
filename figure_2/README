@@ -1,0 +1,10 @@
+To plot figure 2, use
+- "../raw_data/li/raw_sccubbald_results.csv" for Li and select rows with a = 3.5 and basis = "dzvp".
+- "../raw_data/al/raw_hf_rev_scbald_results.csv" for Al isotropic cell and select rows with a = 4.05 and basis = "dzvp".
+- "../raw_data/al/raw_hf_rev_scbald_prim_results.csv" for Al anisotropic cell and select a = 4.05 and basis = "dzvp_prim".
+
+Number of kpts, Nkpts, is evaluated as the product of digits in "kpts" column, e.g. 3*3*3 for 333 or 10*10*5 for 10105.
+
+For Li, plot 1/(2*Nkpts**3) against E_HF/2.0 or E_CCSD_corr/2.0 since there are 2 atoms per cell.
+For Al, plot 1/(2*Nkpts**3) against E_HF/2.0 or E_CCSD_corr/2.0 for anisotropic cell, since there are 2 atoms per cell.
+For Al, plot 1/(4*Nkpts**3) against E_HF/4.0 or E_CCSD_corr/4.0 for sotropic cell, since there are 4 atoms per cell.
